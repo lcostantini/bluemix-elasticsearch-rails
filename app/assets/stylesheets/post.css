@@ -71,6 +71,7 @@ h3 {
   border: 2px solid rgb(176, 202, 219);
   color: #fff;
   margin-top: 1em;
+  margin-right: 0.5em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 100%;
@@ -190,6 +191,11 @@ h3 {
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
   background: none;
+}
+
+.pure-control-group input,
+.pure-control-group textarea {
+  color: black;
 }
 
 @media (min-width: 48em) {

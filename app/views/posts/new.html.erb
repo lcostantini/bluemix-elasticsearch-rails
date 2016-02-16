@@ -1,5 +1,11 @@
-<h1>New Post</h1>
+<nav class="nav">
+  <ul class="nav-list">
+    <li class="nav-item">
+      <%= link_to 'Back', posts_path, class: "pure-button" %>
+    </li>
+  </ul>
+</nav>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', posts_path %>
+<div class="content pure-u-1-2 pure-u-md-1-2">
+  <%= render 'form' %>
+</div>
