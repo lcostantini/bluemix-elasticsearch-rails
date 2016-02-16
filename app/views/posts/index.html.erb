@@ -1,0 +1,23 @@
+<nav class="nav">
+  <ul class="nav-list">
+    <li class="nav-item">
+      <%= link_to 'Create a new post', new_post_path, class: "pure-button" %>
+    </li>
+  </ul>
+</nav>
+
+<div class="content pure-u-1-2 pure-u-md-1-2">
+  <p id="notice"><%= notice %></p>
+  <div class="posts">
+    <% @posts.each do |post| %>
+      <section class="post">
+        <header class="post-header">
+          <h1><%= link_to post.title, post %></h1>
+        </header>
+        <div class="post-description">
+          <p><%= post.body %></p>
+        </div>
+      </section>
+    <% end %>
+  </div>
+</div>
