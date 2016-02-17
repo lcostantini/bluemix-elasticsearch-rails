@@ -198,6 +198,14 @@ h3 {
   color: black;
 }
 
+.pure-form input {
+  color: black;
+}
+
+.pure-input-rounded {
+  width: 30%;
+}
+
 @media (min-width: 48em) {
   .content {
     padding: 2em 3em 0;
