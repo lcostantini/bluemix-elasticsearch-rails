@@ -4,11 +4,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if params[:searh]
-      @posts = Post.all
-    else
-      @posts = Post.all
-    end
+    @posts = Post.all
+  end
+
+  def search
+    @posts = Post.search(params[:q]).records
+    render action: 'index'
   end
 
   # GET /posts/1

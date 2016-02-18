@@ -3,12 +3,16 @@
     <li class="nav-item">
       <%= link_to 'Create a new post', new_post_path, class: "pure-button" %>
     </li>
+    <li class="nav-item">
+      <%= link_to 'All posts', posts_path, class: "pure-button" %>
+    </li>
   </ul>
 </nav>
 
 <div class="content pure-u-1-2 pure-u-md-1-2">
-  <%= form_tag(posts_path, method: 'get', class: "pure-form") do %>
-    <%= text_field_tag :search, nil, placeholder: 'Type text to search', class: "pure-input-rounded" %>
+  <%= form_tag search_posts_path, method: 'get', class: "pure-form" do %>
+    <%= text_field_tag :q, params[:q], placeholder: 'Type text to search',
+      class: "pure-input-rounded" %>
     <%= submit_tag 'Search', name: nil, class: "pure-button" %>
   <% end %>
 
