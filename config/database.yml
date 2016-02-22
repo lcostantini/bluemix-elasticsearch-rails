@@ -12,8 +12,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  <% services = JSON.parse ENV['VCAP_SERVICES']
-     postgres = services["elephantsql"].first["credentials"] %>
-  url: <%= postgres["uri"] %>
+  url: <%= ENV['DATABASE_URL'] %>
   pool: 5
   timeout: 5000
